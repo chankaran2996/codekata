@@ -3,15 +3,12 @@ using namespace std;
 
 int main() {
 	// your code goes here
-	int n,i,j,s=0,a[100000];
-	cin>>n;
+	int n,i,j,k,s=0,a[100000];
+	cin>>n>>k;
 	for(i=0;i<n;i++){
 		cin>>a[i];
 		s=s+a[i];
 	}
-	if(s==0)
-		cout<<s;
-	else{
 		for(i=0;i<n-1;i++){
 			for(j=i;j<n;j++){
 				if(a[i]<a[j]){
@@ -21,8 +18,6 @@ int main() {
 				}
 			}
 		}
-		for(i=0;i<n;i++)
-			cout<<a[i];
-	}
+	cout<<a[k-1];
 	return 0;
 }
